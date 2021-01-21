@@ -1,17 +1,15 @@
-var elCards = document.querySelectorAll('.card')
+var elCards = document.querySelectorAll('.card');
+var elCon = document.querySelector('.container');
 
-
-elCards.forEach( function (elCard) {
-  elCard.addEventListener('click', function () {
-    removeActiveClass();
-    elCard.classList.add('card-active');
+elCards.forEach( function (elcard) {
+  elcard.addEventListener('click', function () {
+    removelist();
+    elcard.classList.add('card-active');
   })
 })
 
-
-
-function removeActiveClass () {
-  elCards.forEach( function (elCard) {
-    elCard.classList.remove('card-active')
+function removelist () {
+  elCards.forEach( function (card) {
+    card.classList.remove('card-active')
   })
 }
