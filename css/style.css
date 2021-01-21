@@ -1,0 +1,120 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 90%;
+  height: 90vh;
+}
+.card {
+  flex: 0.7;
+  margin: 0 15px;
+  border-radius: 40px;
+  position: relative;
+}
+.card-active {
+  flex: 5;
+  transition: flex 0.5s ease-out;
+}
+.card-active .title {
+  opacity: 1;
+}
+.card:nth-child(1) {
+  background-image: url('../img/1.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.card:nth-child(2) {
+  background-image: url('../img/2.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.card:nth-child(3) {
+  background-image: url('../img/3.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.card:nth-child(4) {
+  background-image: url('../img/4.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.card:nth-child(5) {
+  background-image: url('../img/5.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.title {
+  transition: opacity 0.3s ease 0.5;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 24px;
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .card {
+    flex: 0.3;
+    margin: 0 10px;
+  }
+  .card-active {
+    flex: 6;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0;
+  }
+  .card {
+    margin: 5px 0;
+    border-radius: 25px;
+  }
+  .card-active {
+    flex: 4;
+  }
+}
